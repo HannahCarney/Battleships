@@ -25,9 +25,10 @@ describe Board do
     expect(board.contents[0].class).to eq Cell
   end
 
-  # it "should have cells on a grid with 10 columns from 1 - 10"
-  #   expect(board.contents)
-  # end 
+  it "should have cells on a grid with 10 columns from 1 - 10" do
+    expect(board.contents[0..10].class).to eq Array
+  end 
+
 
   # it "should have a grid with 10 rows from A to J"
 

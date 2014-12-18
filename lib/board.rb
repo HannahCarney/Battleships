@@ -3,7 +3,8 @@ require_relative 'cell'
 class Board
 
   def initialize 
-    @contents = Array.new(10){Cell.new}
+    # @contents = contents
+    @contents = Array.new(10){Cell.new}.each_with_index {|cell, index| "#{cell} => #{index}"} 
   end
 
   def contents
@@ -13,6 +14,12 @@ class Board
   def number_count
     contents.count
   end
+
+  def grid
+    @grid
+  end
+
+
 
 
 
