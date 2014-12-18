@@ -4,7 +4,7 @@ class Board
 
   def initialize 
     # @contents = contents
-    @contents = Array.new(10){Cell.new}.each_with_index {|cell, index| "#{cell} => #{index}"} 
+     @contents = Array.new(10){Cell.new}.each_with_index.inject {|cell, index| "#{cell} => #{index}"} 
   end
 
   def contents
