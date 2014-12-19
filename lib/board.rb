@@ -5,12 +5,11 @@ class Board
   def initialize 
     # @contents = conte
     array = []
-    @contents = Array.new(10){Cell.new}.each.with_index(1) {|cell, index| array << "#{cell} => #{index}"} 
-    puts array.zip('A'..'J').to_a {|a| puts a.join}
-    
-  
+    @contents = Array.new(10){Array.new(10){Cell.new}.each.with_index(1) {|cell, index| array << "#{cell} => #{index}"}} 
+    puts array.zip(['A ']*10).to_a {|a| puts a.join}
 
   end
+
           # @contents = contents(0..10).map{|i| i.to_s 10}  
       # Array.new(10){Cell.new}.each.with_index[1].map {|cell, index| puts "#{cell} => #{index}" 10}
 
